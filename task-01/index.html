@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>From static HTML to a Vue Instance</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Hello, {{ name }}!</p>
+      <p>The current date and time is: {{ currentDateTime }}</p>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            name: 'John Doe',
+            currentDateTime: new Date().toLocaleString('en-US')
+          }
+        }
+      })
+
+      app.mount('#app')
+    </script>
+  </body>
+</html>

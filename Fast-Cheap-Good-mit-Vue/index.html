@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Checkboxes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Checkboxes</h1>
+  <div id="app">
+    <div class="checkboxes">
+      <label v-for="(checkbox, index) in checkboxes" :key="checkbox.id">
+        <input type="checkbox" :id="checkbox.id" v-model="checkbox.checked" @change="handleCheckboxChange(index)">
+        <span>{{ checkbox.id }}</span>
+      </label>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="script.js"></script>
+</body>
+</html>

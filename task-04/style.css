@@ -1,0 +1,39 @@
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .tab-navigation {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tab-navigation li {
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .tab-navigation li.active {
+    background-color: #ccc;
+  }
+  
+  .tab-content {
+    margin-top: 10px;
+  }
+  
+  .tab-panel {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .tab-panel.show {
+    display: block;
+  }

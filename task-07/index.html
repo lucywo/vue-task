@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task: Computed properties & Methods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <table>
+      <thead>
+        <tr>
+          <th v-for="key in tableHead">{{ key }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="book in filteredBooks">
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ calculateDiscountedPrice(book.price) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="script.js"></script>
+</body>
+</html>

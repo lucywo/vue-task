@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task: Event Handling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="rectangle" @mousemove="updateCoordinates">
+      <div class="inner-rectangle"></div>
+    </div>
+    <p>Coordinates: {{ x }}, {{ y }}</p>
+
+    <ul>
+      <li v-for="fruit in fruits" :key="fruit.id">
+        {{ fruit.name }}
+        <button @click="removeFruit(fruit.id)">Remove</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="script.js"></script>
+</body>
+</html>

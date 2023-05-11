@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task: Conditional rendering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div class="tab">
+      <ul class="tab-navigation">
+        <li v-for="(tab, index) in tabs" :class="{ active: activeTab === index }" @click="setActiveTab(index)">{{ tab }}</li>
+      </ul>
+      <div class="tab-content">
+        <div v-if="tabs[activeTab]">{{ tabs[activeTab] }}</div>
+        <div v-else>No matching content found for Tab {{ activeTab }}</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="script.js"></script>
+</body>
+</html>

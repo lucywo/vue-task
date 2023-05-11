@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task: List rendering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <table>
+      <thead>
+        <tr>
+          <th v-for="key in Object.keys(books[0])">{{ key }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="book in books">
+          <td v-for="value in Object.values(book)">{{ value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="script.js"></script>
+</body>
+</html>
